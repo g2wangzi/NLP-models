@@ -1,0 +1,30 @@
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Saving checkpoints for 0 into ./data/cips/save/question-model/model.ckpt.
+INFO:tensorflow:loss = 555.13684, step = 1
+INFO:tensorflow:global_step/sec: 0.283532
+INFO:tensorflow:loss = 99.20574, step = 101 (352.695 sec)
+INFO:tensorflow:Saving checkpoints for 200 into ./data/cips/save/question-model/model.ckpt.
+WARNING:tensorflow:Entity <function <lambda>.<locals>.<lambda> at 0x7f63bd3018c8> could not be transformed and will be executed as-is. Please report this to the AutoGraph team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output. Cause: expected exactly one node node, found []
+WARNING:tensorflow:Entity <function <lambda>.<locals>.<lambda> at 0x7f63bd3010d0> could not be transformed and will be executed as-is. Please report this to the AutoGraph team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output. Cause: expected exactly one node node, found []
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2020-04-02T17:34:15Z
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from ./data/cips/save/question-model/model.ckpt-200
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Evaluation [10/100]
+INFO:tensorflow:Evaluation [20/100]
+INFO:tensorflow:Evaluation [30/100]
+INFO:tensorflow:Evaluation [40/100]
+INFO:tensorflow:Evaluation [50/100]
+INFO:tensorflow:Evaluation [60/100]
+INFO:tensorflow:Evaluation [70/100]
+INFO:tensorflow:Evaluation [80/100]
+INFO:tensorflow:Evaluation [90/100]
+INFO:tensorflow:Evaluation [100/100]
+INFO:tensorflow:Finished evaluation at 2020-04-02-17:41:34
+INFO:tensorflow:Saving dict for global step 200: accuracy = 0.7036719, average_loss = 1.4304721, global_step = 200, loss = 183.10043
+INFO:tensorflow:Saving 'checkpoint_path' summary for global step 200: ./data/cips/save/question-model/model.ckpt-200
+INFO:tensorflow:Loss for final step: 23.905788.

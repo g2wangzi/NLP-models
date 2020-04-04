@@ -1,0 +1,10 @@
+file1 = open('./questiondata/train_1000-UTF8.label', 'r') 
+Lines = file1.readlines()
+myset = set()
+questions = set()
+for line in Lines:
+	splited = line.split(" ", 1)
+	myset.add(splited[0])
+	questions.add(splited[1])
+print(myset)
+print(questions)

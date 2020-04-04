@@ -1,0 +1,476 @@
+WARNING:tensorflow:From universal-sentence-encoder-faster.py:13: The name tf.logging.set_verbosity is deprecated. Please use tf.compat.v1.logging.set_verbosity instead.
+
+WARNING:tensorflow:From universal-sentence-encoder-faster.py:13: The name tf.logging.INFO is deprecated. Please use tf.compat.v1.logging.INFO instead.
+
+WARNING:tensorflow:From universal-sentence-encoder-faster.py:71: The name tf.ConfigProto is deprecated. Please use tf.compat.v1.ConfigProto instead.
+
+INFO:tensorflow:Using config: {'_model_dir': './data/cips/save/uestion-uce-model-faster', '_tf_random_seed': None, '_save_summary_steps': 100, '_save_checkpoints_steps': 200, '_save_checkpoints_secs': None, '_session_config': , '_keep_checkpoint_max': 5, '_keep_checkpoint_every_n_hours': 10000, '_log_step_count_steps': 100, '_train_distribute': None, '_device_fn': None, '_protocol': None, '_eval_distribute': None, '_experimental_distribute': None, '_experimental_max_worker_delay_secs': None, '_session_creation_timeout_secs': 7200, '_service': None, '_cluster_spec': <tensorflow.python.training.server_lib.ClusterSpec object at 0x7f4171981b38>, '_task_type': 'worker', '_task_id': 0, '_global_id_in_cluster': 0, '_master': '', '_evaluation_master': '', '_is_chief': True, '_num_ps_replicas': 0, '_num_worker_replicas': 1}
+INFO:tensorflow:Not using Distribute Coordinator.
+INFO:tensorflow:Running training and evaluation locally (non-distributed).
+INFO:tensorflow:Start train and evaluate loop. The evaluate will happen after every checkpoint. Checkpoint frequency is determined based on RunConfig arguments: save_checkpoints_steps 200 or save_checkpoints_secs None.
+WARNING:tensorflow:From /u/z2367wan/.local/lib/python3.6/site-packages/tensorflow_core/python/training/training_util.py:236: Variable.initialized_value (from tensorflow.python.ops.variables) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use Variable.read_value. Variables in 2.X are initialized automatically both in eager and graph (inside tf.defun) contexts.
+WARNING:tensorflow:
+The TensorFlow contrib module will not be included in TensorFlow 2.0.
+For more information, please see:
+  * https://github.com/tensorflow/community/blob/master/rfcs/20180907-contrib-sunset.md
+  * https://github.com/tensorflow/addons
+  * https://github.com/tensorflow/io (for I/O related ops)
+If you depend on functionality not listed there, please file an issue.
+
+WARNING:tensorflow:From universal-sentence-encoder-faster.py:86: shuffle_and_repeat (from tensorflow.contrib.data.python.ops.shuffle_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.data.experimental.shuffle_and_repeat(...)`.
+WARNING:tensorflow:From /u/z2367wan/.local/lib/python3.6/site-packages/tensorflow_core/contrib/data/python/ops/shuffle_ops.py:54: shuffle_and_repeat (from tensorflow.python.data.experimental.ops.shuffle_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.data.Dataset.shuffle(buffer_size, seed)` followed by `tf.data.Dataset.repeat(count)`. Static tf.data optimizations will take care of using the fused implementation.
+WARNING:tensorflow:Entity <function <lambda>.<locals>.<lambda> at 0x7f4162a7fa60> could not be transformed and will be executed as-is. Please report this to the AutoGraph team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output. Cause: expected exactly one node node, found []
+WARNING:tensorflow:From universal-sentence-encoder-faster.py:88: py_func (from tensorflow.python.ops.script_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+tf.py_func is deprecated in TF V2. Instead, there are two
+    options available in V2.
+    - tf.py_function takes a python function which manipulates tf eager
+    tensors instead of numpy arrays. It's easy to convert a tf eager tensor to
+    an ndarray (just call tensor.numpy()) but having access to eager tensors
+    means `tf.py_function`s can use accelerators such as GPUs as well as
+    being differentiable using a gradient tape.
+    - tf.numpy_function maintains the semantics of the deprecated tf.py_func
+    (it is not differentiable, and manipulates numpy arrays). It drops the
+    stateful argument making all functions stateful.
+    
+WARNING:tensorflow:Entity <function <lambda>.<locals>.<lambda> at 0x7f4162a902f0> could not be transformed and will be executed as-is. Please report this to the AutoGraph team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output. Cause: expected exactly one node node, found []
+INFO:tensorflow:Calling model_fn.
+WARNING:tensorflow:From /u/z2367wan/.local/lib/python3.6/site-packages/tensorflow_core/python/ops/resource_variable_ops.py:1630: calling BaseResourceVariable.__init__ (from tensorflow.python.ops.resource_variable_ops) with constraint is deprecated and will be removed in a future version.
+Instructions for updating:
+If using Keras pass *_constraint arguments to layers.
+WARNING:tensorflow:From /u/z2367wan/.local/lib/python3.6/site-packages/tensorflow_estimator/python/estimator/canned/head.py:437: to_float (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.cast` instead.
+WARNING:tensorflow:From /u/z2367wan/.local/lib/python3.6/site-packages/tensorflow_core/python/training/adagrad.py:76: calling Constant.__init__ (from tensorflow.python.ops.init_ops) with dtype is deprecated and will be removed in a future version.
+Instructions for updating:
+Call initializer instance with the dtype argument instead of passing it to the constructor
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Create CheckpointSaverHook.
+WARNING:tensorflow:From /u/z2367wan/.local/lib/python3.6/site-packages/tensorflow_core/python/ops/array_ops.py:1475: where (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+INFO:tensorflow:Graph was finalized.
+2020-04-03 19:46:02.202531: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2020-04-03 19:46:02.217896: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2199980000 Hz
+2020-04-03 19:46:02.223239: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x67a9000 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2020-04-03 19:46:02.223268: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+2020-04-03 19:46:02.226153: W tensorflow/stream_executor/platform/default/dso_loader.cc:55] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory
+2020-04-03 19:46:02.226182: E tensorflow/stream_executor/cuda/cuda_driver.cc:318] failed call to cuInit: UNKNOWN ERROR (303)
+2020-04-03 19:46:02.226205: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (tuna): /proc/driver/nvidia/version does not exist
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Saving checkpoints for 0 into ./data/cips/save/uestion-uce-model-faster/model.ckpt.
+WARNING:tensorflow:From universal-sentence-encoder-faster.py:56: The name tf.Session is deprecated. Please use tf.compat.v1.Session instead.
+
+WARNING:tensorflow:From universal-sentence-encoder-faster.py:57: The name tf.global_variables_initializer is deprecated. Please use tf.compat.v1.global_variables_initializer instead.
+
+WARNING:tensorflow:From universal-sentence-encoder-faster.py:57: The name tf.tables_initializer is deprecated. Please use tf.compat.v1.tables_initializer instead.
+
+INFO:tensorflow:loss = 500.65228, step = 1
+INFO:tensorflow:global_step/sec: 0.0780839
+INFO:tensorflow:loss = 88.75383, step = 101 (1280.675 sec)
+INFO:tensorflow:Saving checkpoints for 200 into ./data/cips/save/uestion-uce-model-faster/model.ckpt.
+WARNING:tensorflow:Entity <function <lambda>.<locals>.<lambda> at 0x7f38d7e81950> could not be transformed and will be executed as-is. Please report this to the AutoGraph team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output. Cause: expected exactly one node node, found []
+WARNING:tensorflow:Entity <function <lambda>.<locals>.<lambda> at 0x7f38d7e81d08> could not be transformed and will be executed as-is. Please report this to the AutoGraph team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output. Cause: expected exactly one node node, found []
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2020-04-03T20:28:50Z
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from ./data/cips/save/uestion-uce-model-faster/model.ckpt-200
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Evaluation [10/100]
+INFO:tensorflow:Evaluation [20/100]
+INFO:tensorflow:Evaluation [30/100]
+INFO:tensorflow:Evaluation [40/100]
+INFO:tensorflow:Evaluation [50/100]
+INFO:tensorflow:Evaluation [60/100]
+INFO:tensorflow:Evaluation [70/100]
+INFO:tensorflow:Evaluation [80/100]
+INFO:tensorflow:Evaluation [90/100]
+INFO:tensorflow:Evaluation [100/100]
+INFO:tensorflow:Finished evaluation at 2020-04-03-20:51:24
+INFO:tensorflow:Saving dict for global step 200: accuracy = 0.8475781, average_loss = 0.639621, global_step = 200, loss = 81.87149
+INFO:tensorflow:Saving 'checkpoint_path' summary for global step 200: ./data/cips/save/uestion-uce-model-faster/model.ckpt-200
+INFO:tensorflow:global_step/sec: 0.0380458
+INFO:tensorflow:loss = 53.952614, step = 201 (2628.412 sec)
+INFO:tensorflow:global_step/sec: 0.0948869
+INFO:tensorflow:loss = 25.60567, step = 301 (1053.887 sec)
+INFO:tensorflow:Saving checkpoints for 400 into ./data/cips/save/uestion-uce-model-faster/model.ckpt.
+WARNING:tensorflow:Entity <function <lambda>.<locals>.<lambda> at 0x7f363dc2c488> could not be transformed and will be executed as-is. Please report this to the AutoGraph team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output. Cause: expected exactly one node node, found []
+WARNING:tensorflow:Entity <function <lambda>.<locals>.<lambda> at 0x7f363dc2c510> could not be transformed and will be executed as-is. Please report this to the AutoGraph team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output. Cause: expected exactly one node node, found []
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2020-04-03T21:30:21Z
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from ./data/cips/save/uestion-uce-model-faster/model.ckpt-400
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Evaluation [10/100]
+INFO:tensorflow:Evaluation [20/100]
+INFO:tensorflow:Evaluation [30/100]
+INFO:tensorflow:Evaluation [40/100]
+INFO:tensorflow:Evaluation [50/100]
+INFO:tensorflow:Evaluation [60/100]
+INFO:tensorflow:Evaluation [70/100]
+INFO:tensorflow:Evaluation [80/100]
+INFO:tensorflow:Evaluation [90/100]
+INFO:tensorflow:Evaluation [100/100]
+INFO:tensorflow:Finished evaluation at 2020-04-03-21:53:12
+INFO:tensorflow:Saving dict for global step 400: accuracy = 0.83382815, average_loss = 0.63450074, global_step = 400, loss = 81.216095
+INFO:tensorflow:Saving 'checkpoint_path' summary for global step 400: ./data/cips/save/uestion-uce-model-faster/model.ckpt-400
+INFO:tensorflow:global_step/sec: 0.0376885
+INFO:tensorflow:loss = 16.69883, step = 401 (2653.455 sec)
+INFO:tensorflow:global_step/sec: 0.0958167
+INFO:tensorflow:loss = 17.017845, step = 501 (1043.658 sec)
+INFO:tensorflow:Saving checkpoints for 600 into ./data/cips/save/uestion-uce-model-faster/model.ckpt.
+WARNING:tensorflow:Entity <function <lambda>.<locals>.<lambda> at 0x7f33ac961f28> could not be transformed and will be executed as-is. Please report this to the AutoGraph team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output. Cause: expected exactly one node node, found []
+WARNING:tensorflow:Entity <function <lambda>.<locals>.<lambda> at 0x7f33acb48a60> could not be transformed and will be executed as-is. Please report this to the AutoGraph team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output. Cause: expected exactly one node node, found []
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2020-04-03T22:32:38Z
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from ./data/cips/save/uestion-uce-model-faster/model.ckpt-600
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Evaluation [10/100]
+INFO:tensorflow:Evaluation [20/100]
+INFO:tensorflow:Evaluation [30/100]
+INFO:tensorflow:Evaluation [40/100]
+INFO:tensorflow:Evaluation [50/100]
+INFO:tensorflow:Evaluation [60/100]
+INFO:tensorflow:Evaluation [70/100]
+INFO:tensorflow:Evaluation [80/100]
+INFO:tensorflow:Evaluation [90/100]
+INFO:tensorflow:Evaluation [100/100]
+INFO:tensorflow:Finished evaluation at 2020-04-03-22:55:29
+INFO:tensorflow:Saving dict for global step 600: accuracy = 0.84382814, average_loss = 0.63652444, global_step = 600, loss = 81.47513
+INFO:tensorflow:Saving 'checkpoint_path' summary for global step 600: ./data/cips/save/uestion-uce-model-faster/model.ckpt-600
+INFO:tensorflow:global_step/sec: 0.0371196
+INFO:tensorflow:loss = 8.958065, step = 601 (2693.875 sec)
+INFO:tensorflow:global_step/sec: 0.0968419
+INFO:tensorflow:loss = 8.796043, step = 701 (1032.612 sec)
+INFO:tensorflow:Saving checkpoints for 800 into ./data/cips/save/uestion-uce-model-faster/model.ckpt.
+WARNING:tensorflow:Entity <function <lambda>.<locals>.<lambda> at 0x7f339efc10d0> could not be transformed and will be executed as-is. Please report this to the AutoGraph team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output. Cause: expected exactly one node node, found []
+WARNING:tensorflow:Entity <function <lambda>.<locals>.<lambda> at 0x7f30f4e50c80> could not be transformed and will be executed as-is. Please report this to the AutoGraph team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output. Cause: expected exactly one node node, found []
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2020-04-03T23:33:56Z
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from ./data/cips/save/uestion-uce-model-faster/model.ckpt-800
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Evaluation [10/100]
+INFO:tensorflow:Evaluation [20/100]
+INFO:tensorflow:Evaluation [30/100]
+INFO:tensorflow:Evaluation [40/100]
+INFO:tensorflow:Evaluation [50/100]
+INFO:tensorflow:Evaluation [60/100]
+INFO:tensorflow:Evaluation [70/100]
+INFO:tensorflow:Evaluation [80/100]
+INFO:tensorflow:Evaluation [90/100]
+INFO:tensorflow:Evaluation [100/100]
+INFO:tensorflow:Finished evaluation at 2020-04-03-23:56:25
+INFO:tensorflow:Saving dict for global step 800: accuracy = 0.8440625, average_loss = 0.6640399, global_step = 800, loss = 84.99711
+INFO:tensorflow:Saving 'checkpoint_path' summary for global step 800: ./data/cips/save/uestion-uce-model-faster/model.ckpt-800
+INFO:tensorflow:global_step/sec: 0.0381279
+INFO:tensorflow:loss = 5.906126, step = 801 (2622.749 sec)
+INFO:tensorflow:global_step/sec: 0.0979787
+INFO:tensorflow:loss = 4.107891, step = 901 (1020.645 sec)
+INFO:tensorflow:Saving checkpoints for 1000 into ./data/cips/save/uestion-uce-model-faster/model.ckpt.
+WARNING:tensorflow:From /u/z2367wan/.local/lib/python3.6/site-packages/tensorflow_core/python/training/saver.py:963: remove_checkpoint (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to delete files with this prefix.
+WARNING:tensorflow:Entity <function <lambda>.<locals>.<lambda> at 0x7f2ddf4907b8> could not be transformed and will be executed as-is. Please report this to the AutoGraph team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output. Cause: expected exactly one node node, found []
+WARNING:tensorflow:Entity <function <lambda>.<locals>.<lambda> at 0x7f2ddf9921e0> could not be transformed and will be executed as-is. Please report this to the AutoGraph team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output. Cause: expected exactly one node node, found []
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2020-04-04T00:37:52Z
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from ./data/cips/save/uestion-uce-model-faster/model.ckpt-1000
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Evaluation [10/100]
+INFO:tensorflow:Evaluation [20/100]
+INFO:tensorflow:Evaluation [30/100]
+INFO:tensorflow:Evaluation [40/100]
+INFO:tensorflow:Evaluation [50/100]
+INFO:tensorflow:Evaluation [60/100]
+INFO:tensorflow:Evaluation [70/100]
+INFO:tensorflow:Evaluation [80/100]
+INFO:tensorflow:Evaluation [90/100]
+INFO:tensorflow:Evaluation [100/100]
+INFO:tensorflow:Finished evaluation at 2020-04-04-01:02:28
+INFO:tensorflow:Saving dict for global step 1000: accuracy = 0.8419531, average_loss = 0.6962283, global_step = 1000, loss = 89.117226
+INFO:tensorflow:Saving 'checkpoint_path' summary for global step 1000: ./data/cips/save/uestion-uce-model-faster/model.ckpt-1000
+INFO:tensorflow:global_step/sec: 0.033977
+INFO:tensorflow:loss = 3.9553485, step = 1001 (2943.165 sec)
+INFO:tensorflow:global_step/sec: 0.083089
+INFO:tensorflow:loss = 2.9597301, step = 1101 (1203.559 sec)
+INFO:tensorflow:Saving checkpoints for 1200 into ./data/cips/save/uestion-uce-model-faster/model.ckpt.
+WARNING:tensorflow:Entity <function <lambda>.<locals>.<lambda> at 0x7f2b558e76a8> could not be transformed and will be executed as-is. Please report this to the AutoGraph team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output. Cause: expected exactly one node node, found []
+WARNING:tensorflow:Entity <function <lambda>.<locals>.<lambda> at 0x7f2b558e7268> could not be transformed and will be executed as-is. Please report this to the AutoGraph team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output. Cause: expected exactly one node node, found []
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2020-04-04T01:48:27Z
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from ./data/cips/save/uestion-uce-model-faster/model.ckpt-1200
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Evaluation [10/100]
+INFO:tensorflow:Evaluation [20/100]
+INFO:tensorflow:Evaluation [30/100]
+INFO:tensorflow:Evaluation [40/100]
+INFO:tensorflow:Evaluation [50/100]
+INFO:tensorflow:Evaluation [60/100]
+INFO:tensorflow:Evaluation [70/100]
+INFO:tensorflow:Evaluation [80/100]
+INFO:tensorflow:Evaluation [90/100]
+INFO:tensorflow:Evaluation [100/100]
+INFO:tensorflow:Finished evaluation at 2020-04-04-02:16:37
+INFO:tensorflow:Saving dict for global step 1200: accuracy = 0.84414065, average_loss = 0.7087333, global_step = 1200, loss = 90.717865
+INFO:tensorflow:Saving 'checkpoint_path' summary for global step 1200: ./data/cips/save/uestion-uce-model-faster/model.ckpt-1200
+INFO:tensorflow:global_step/sec: 0.030812
+INFO:tensorflow:loss = 2.4376307, step = 1201 (3245.468 sec)
+INFO:tensorflow:global_step/sec: 0.0728802
+INFO:tensorflow:loss = 3.5644796, step = 1301 (1372.191 sec)
+INFO:tensorflow:Saving checkpoints for 1400 into ./data/cips/save/uestion-uce-model-faster/model.ckpt.
+WARNING:tensorflow:Entity <function <lambda>.<locals>.<lambda> at 0x7f27f360ce18> could not be transformed and will be executed as-is. Please report this to the AutoGraph team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output. Cause: expected exactly one node node, found []
+WARNING:tensorflow:Entity <function <lambda>.<locals>.<lambda> at 0x7f27f3b00158> could not be transformed and will be executed as-is. Please report this to the AutoGraph team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output. Cause: expected exactly one node node, found []
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2020-04-04T03:10:38Z
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from ./data/cips/save/uestion-uce-model-faster/model.ckpt-1400
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Evaluation [10/100]
+INFO:tensorflow:Evaluation [20/100]
+INFO:tensorflow:Evaluation [30/100]
+INFO:tensorflow:Evaluation [40/100]
+INFO:tensorflow:Evaluation [50/100]
+INFO:tensorflow:Evaluation [60/100]
+INFO:tensorflow:Evaluation [70/100]
+INFO:tensorflow:Evaluation [80/100]
+INFO:tensorflow:Evaluation [90/100]
+INFO:tensorflow:Evaluation [100/100]
+INFO:tensorflow:Finished evaluation at 2020-04-04-03:32:08
+INFO:tensorflow:Saving dict for global step 1400: accuracy = 0.84171873, average_loss = 0.71799886, global_step = 1400, loss = 91.903854
+INFO:tensorflow:Saving 'checkpoint_path' summary for global step 1400: ./data/cips/save/uestion-uce-model-faster/model.ckpt-1400
+INFO:tensorflow:global_step/sec: 0.0316625
+INFO:tensorflow:loss = 2.6634178, step = 1401 (3158.349 sec)
+INFO:tensorflow:global_step/sec: 0.109788
+INFO:tensorflow:loss = 1.4113066, step = 1501 (910.719 sec)
+INFO:tensorflow:Saving checkpoints for 1600 into ./data/cips/save/uestion-uce-model-faster/model.ckpt.
+WARNING:tensorflow:Entity <function <lambda>.<locals>.<lambda> at 0x7f255d4b7ae8> could not be transformed and will be executed as-is. Please report this to the AutoGraph team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output. Cause: expected exactly one node node, found []
+WARNING:tensorflow:Entity <function <lambda>.<locals>.<lambda> at 0x7f255d49c048> could not be transformed and will be executed as-is. Please report this to the AutoGraph team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output. Cause: expected exactly one node node, found []
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2020-04-04T04:04:57Z
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from ./data/cips/save/uestion-uce-model-faster/model.ckpt-1600
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Evaluation [10/100]
+INFO:tensorflow:Evaluation [20/100]
+INFO:tensorflow:Evaluation [30/100]
+INFO:tensorflow:Evaluation [40/100]
+INFO:tensorflow:Evaluation [50/100]
+INFO:tensorflow:Evaluation [60/100]
+INFO:tensorflow:Evaluation [70/100]
+INFO:tensorflow:Evaluation [80/100]
+INFO:tensorflow:Evaluation [90/100]
+INFO:tensorflow:Evaluation [100/100]
+INFO:tensorflow:Finished evaluation at 2020-04-04-04:23:34
+INFO:tensorflow:Saving dict for global step 1600: accuracy = 0.8442969, average_loss = 0.73796564, global_step = 1600, loss = 94.4596
+INFO:tensorflow:Saving 'checkpoint_path' summary for global step 1600: ./data/cips/save/uestion-uce-model-faster/model.ckpt-1600
+INFO:tensorflow:global_step/sec: 0.0459558
+INFO:tensorflow:loss = 1.1245681, step = 1601 (2176.086 sec)
+INFO:tensorflow:global_step/sec: 0.116504
+INFO:tensorflow:loss = 1.600402, step = 1701 (858.255 sec)
+INFO:tensorflow:Saving checkpoints for 1800 into ./data/cips/save/uestion-uce-model-faster/model.ckpt.
+WARNING:tensorflow:Entity <function <lambda>.<locals>.<lambda> at 0x7f22adcda378> could not be transformed and will be executed as-is. Please report this to the AutoGraph team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output. Cause: expected exactly one node node, found []
+WARNING:tensorflow:Entity <function <lambda>.<locals>.<lambda> at 0x7f22adcdaea0> could not be transformed and will be executed as-is. Please report this to the AutoGraph team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output. Cause: expected exactly one node node, found []
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2020-04-04T04:56:20Z
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from ./data/cips/save/uestion-uce-model-faster/model.ckpt-1800
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Evaluation [10/100]
+INFO:tensorflow:Evaluation [20/100]
+INFO:tensorflow:Evaluation [30/100]
+INFO:tensorflow:Evaluation [40/100]
+INFO:tensorflow:Evaluation [50/100]
+INFO:tensorflow:Evaluation [60/100]
+INFO:tensorflow:Evaluation [70/100]
+INFO:tensorflow:Evaluation [80/100]
+INFO:tensorflow:Evaluation [90/100]
+INFO:tensorflow:Evaluation [100/100]
+INFO:tensorflow:Finished evaluation at 2020-04-04-05:14:57
+INFO:tensorflow:Saving dict for global step 1800: accuracy = 0.8414062, average_loss = 0.74346334, global_step = 1800, loss = 95.16331
+INFO:tensorflow:Saving 'checkpoint_path' summary for global step 1800: ./data/cips/save/uestion-uce-model-faster/model.ckpt-1800
+INFO:tensorflow:global_step/sec: 0.0449633
+INFO:tensorflow:loss = 1.3701975, step = 1801 (2224.033 sec)
+INFO:tensorflow:global_step/sec: 0.116566
+INFO:tensorflow:loss = 1.3235754, step = 1901 (857.886 sec)
+INFO:tensorflow:Saving checkpoints for 2000 into ./data/cips/save/uestion-uce-model-faster/model.ckpt.
+WARNING:tensorflow:Entity <function <lambda>.<locals>.<lambda> at 0x7f1ff5b138c8> could not be transformed and will be executed as-is. Please report this to the AutoGraph team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output. Cause: expected exactly one node node, found []
+WARNING:tensorflow:Entity <function <lambda>.<locals>.<lambda> at 0x7f1ff5ad3048> could not be transformed and will be executed as-is. Please report this to the AutoGraph team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output. Cause: expected exactly one node node, found []
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2020-04-04T05:46:49Z
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from ./data/cips/save/uestion-uce-model-faster/model.ckpt-2000
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Evaluation [10/100]
+INFO:tensorflow:Evaluation [20/100]
+INFO:tensorflow:Evaluation [30/100]
+INFO:tensorflow:Evaluation [40/100]
+INFO:tensorflow:Evaluation [50/100]
+INFO:tensorflow:Evaluation [60/100]
+INFO:tensorflow:Evaluation [70/100]
+INFO:tensorflow:Evaluation [80/100]
+INFO:tensorflow:Evaluation [90/100]
+INFO:tensorflow:Evaluation [100/100]
+INFO:tensorflow:Finished evaluation at 2020-04-04-06:05:29
+INFO:tensorflow:Saving dict for global step 2000: accuracy = 0.84351563, average_loss = 0.75603026, global_step = 2000, loss = 96.77187
+INFO:tensorflow:Saving 'checkpoint_path' summary for global step 2000: ./data/cips/save/uestion-uce-model-faster/model.ckpt-2000
+INFO:tensorflow:global_step/sec: 0.0460007
+INFO:tensorflow:loss = 1.1038759, step = 2001 (2173.881 sec)
+INFO:tensorflow:global_step/sec: 0.115409
+INFO:tensorflow:loss = 0.89907783, step = 2101 (866.589 sec)
+INFO:tensorflow:Saving checkpoints for 2200 into ./data/cips/save/uestion-uce-model-faster/model.ckpt.
+WARNING:tensorflow:Entity <function <lambda>.<locals>.<lambda> at 0x7f1d14519378> could not be transformed and will be executed as-is. Please report this to the AutoGraph team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output. Cause: expected exactly one node node, found []
+WARNING:tensorflow:Entity <function <lambda>.<locals>.<lambda> at 0x7f1d14519bf8> could not be transformed and will be executed as-is. Please report this to the AutoGraph team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output. Cause: expected exactly one node node, found []
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2020-04-04T06:38:48Z
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from ./data/cips/save/uestion-uce-model-faster/model.ckpt-2200
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Evaluation [10/100]
+INFO:tensorflow:Evaluation [20/100]
+INFO:tensorflow:Evaluation [30/100]
+INFO:tensorflow:Evaluation [40/100]
+INFO:tensorflow:Evaluation [50/100]
+INFO:tensorflow:Evaluation [60/100]
+INFO:tensorflow:Evaluation [70/100]
+INFO:tensorflow:Evaluation [80/100]
+INFO:tensorflow:Evaluation [90/100]
+INFO:tensorflow:Evaluation [100/100]
+INFO:tensorflow:Finished evaluation at 2020-04-04-06:57:42
+INFO:tensorflow:Saving dict for global step 2200: accuracy = 0.8435938, average_loss = 0.76083565, global_step = 2200, loss = 97.38696
+INFO:tensorflow:Saving 'checkpoint_path' summary for global step 2200: ./data/cips/save/uestion-uce-model-faster/model.ckpt-2200
+INFO:tensorflow:global_step/sec: 0.0441129
+INFO:tensorflow:loss = 1.4458277, step = 2201 (2266.804 sec)
+INFO:tensorflow:global_step/sec: 0.114951
+INFO:tensorflow:loss = 0.96619225, step = 2301 (870.118 sec)
+INFO:tensorflow:Saving checkpoints for 2400 into ./data/cips/save/uestion-uce-model-faster/model.ckpt.
+WARNING:tensorflow:Entity <function <lambda>.<locals>.<lambda> at 0x7f1a2e28eea0> could not be transformed and will be executed as-is. Please report this to the AutoGraph team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output. Cause: expected exactly one node node, found []
+WARNING:tensorflow:Entity <function <lambda>.<locals>.<lambda> at 0x7f1a2e2ee620> could not be transformed and will be executed as-is. Please report this to the AutoGraph team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output. Cause: expected exactly one node node, found []
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2020-04-04T07:30:02Z
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from ./data/cips/save/uestion-uce-model-faster/model.ckpt-2400
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Evaluation [10/100]
+INFO:tensorflow:Evaluation [20/100]
+INFO:tensorflow:Evaluation [30/100]
+INFO:tensorflow:Evaluation [40/100]
+INFO:tensorflow:Evaluation [50/100]
+INFO:tensorflow:Evaluation [60/100]
+INFO:tensorflow:Evaluation [70/100]
+INFO:tensorflow:Evaluation [80/100]
+INFO:tensorflow:Evaluation [90/100]
+INFO:tensorflow:Evaluation [100/100]
+INFO:tensorflow:Finished evaluation at 2020-04-04-07:51:03
+INFO:tensorflow:Saving dict for global step 2400: accuracy = 0.8424219, average_loss = 0.77037776, global_step = 2400, loss = 98.60835
+INFO:tensorflow:Saving 'checkpoint_path' summary for global step 2400: ./data/cips/save/uestion-uce-model-faster/model.ckpt-2400
+INFO:tensorflow:global_step/sec: 0.0428972
+INFO:tensorflow:loss = 0.7888382, step = 2401 (2331.105 sec)
+INFO:tensorflow:global_step/sec: 0.101761
+INFO:tensorflow:loss = 0.7365976, step = 2501 (982.571 sec)
+INFO:tensorflow:Saving checkpoints for 2600 into ./data/cips/save/uestion-uce-model-faster/model.ckpt.
+WARNING:tensorflow:Entity <function <lambda>.<locals>.<lambda> at 0x7f1cd7ff4158> could not be transformed and will be executed as-is. Please report this to the AutoGraph team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output. Cause: expected exactly one node node, found []
+WARNING:tensorflow:Entity <function <lambda>.<locals>.<lambda> at 0x7f1cd7ff4a60> could not be transformed and will be executed as-is. Please report this to the AutoGraph team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output. Cause: expected exactly one node node, found []
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2020-04-04T08:27:46Z
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from ./data/cips/save/uestion-uce-model-faster/model.ckpt-2600
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Evaluation [10/100]
+INFO:tensorflow:Evaluation [20/100]
+INFO:tensorflow:Evaluation [30/100]
+INFO:tensorflow:Evaluation [40/100]
+INFO:tensorflow:Evaluation [50/100]
+INFO:tensorflow:Evaluation [60/100]
+INFO:tensorflow:Evaluation [70/100]
+INFO:tensorflow:Evaluation [80/100]
+INFO:tensorflow:Evaluation [90/100]
+INFO:tensorflow:Evaluation [100/100]
+INFO:tensorflow:Finished evaluation at 2020-04-04-08:49:02
+INFO:tensorflow:Saving dict for global step 2600: accuracy = 0.84382814, average_loss = 0.7849753, global_step = 2600, loss = 100.47684
+INFO:tensorflow:Saving 'checkpoint_path' summary for global step 2600: ./data/cips/save/uestion-uce-model-faster/model.ckpt-2600
+INFO:tensorflow:global_step/sec: 0.0400575
+INFO:tensorflow:loss = 0.90957904, step = 2601 (2496.409 sec)
+INFO:tensorflow:global_step/sec: 0.108489
+INFO:tensorflow:loss = 0.7548791, step = 2701 (921.761 sec)
+INFO:tensorflow:Saving checkpoints for 2800 into ./data/cips/save/uestion-uce-model-faster/model.ckpt.
+WARNING:tensorflow:Entity <function <lambda>.<locals>.<lambda> at 0x7f1536c3be18> could not be transformed and will be executed as-is. Please report this to the AutoGraph team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output. Cause: expected exactly one node node, found []
+WARNING:tensorflow:Entity <function <lambda>.<locals>.<lambda> at 0x7f1536c3b488> could not be transformed and will be executed as-is. Please report this to the AutoGraph team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output. Cause: expected exactly one node node, found []
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2020-04-04T09:23:00Z
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from ./data/cips/save/uestion-uce-model-faster/model.ckpt-2800
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Evaluation [10/100]
+INFO:tensorflow:Evaluation [20/100]
+INFO:tensorflow:Evaluation [30/100]
+INFO:tensorflow:Evaluation [40/100]
+INFO:tensorflow:Evaluation [50/100]
+INFO:tensorflow:Evaluation [60/100]
+INFO:tensorflow:Evaluation [70/100]
+INFO:tensorflow:Evaluation [80/100]
+INFO:tensorflow:Evaluation [90/100]
+INFO:tensorflow:Evaluation [100/100]
+INFO:tensorflow:Finished evaluation at 2020-04-04-09:43:04
+INFO:tensorflow:Saving dict for global step 2800: accuracy = 0.8425, average_loss = 0.78003687, global_step = 2800, loss = 99.84472
+INFO:tensorflow:Saving 'checkpoint_path' summary for global step 2800: ./data/cips/save/uestion-uce-model-faster/model.ckpt-2800
+INFO:tensorflow:global_step/sec: 0.0430965
+INFO:tensorflow:loss = 0.73851186, step = 2801 (2320.363 sec)
+INFO:tensorflow:global_step/sec: 0.106511
+INFO:tensorflow:loss = 0.5981904, step = 2901 (939.132 sec)
+INFO:tensorflow:Saving checkpoints for 3000 into ./data/cips/save/uestion-uce-model-faster/model.ckpt.
+WARNING:tensorflow:Entity <function <lambda>.<locals>.<lambda> at 0x7f12ac99d950> could not be transformed and will be executed as-is. Please report this to the AutoGraph team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output. Cause: expected exactly one node node, found []
+WARNING:tensorflow:Entity <function <lambda>.<locals>.<lambda> at 0x7f12ac99d268> could not be transformed and will be executed as-is. Please report this to the AutoGraph team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output. Cause: expected exactly one node node, found []
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2020-04-04T10:19:35Z
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from ./data/cips/save/uestion-uce-model-faster/model.ckpt-3000
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Evaluation [10/100]
+INFO:tensorflow:Evaluation [20/100]
+INFO:tensorflow:Evaluation [30/100]
+INFO:tensorflow:Evaluation [40/100]
+INFO:tensorflow:Evaluation [50/100]
+INFO:tensorflow:Evaluation [60/100]
+INFO:tensorflow:Evaluation [70/100]
+INFO:tensorflow:Evaluation [80/100]
