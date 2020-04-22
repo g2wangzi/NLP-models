@@ -1,4 +1,4 @@
-file1 = open('./questiondata/train_1000-UTF8.label', 'r') 
+file1 = open('./questiondata/train_1000.label', 'r') 
 Lines = file1.readlines()
 myset = set()
 questions = set()

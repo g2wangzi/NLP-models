@@ -1,0 +1,269 @@
+WARNING:tensorflow:From example5-question-base.py:25: The name tf.logging.set_verbosity is deprecated. Please use tf.compat.v1.logging.set_verbosity instead.
+
+WARNING:tensorflow:From example5-question-base.py:25: The name tf.logging.INFO is deprecated. Please use tf.compat.v1.logging.INFO instead.
+
+WARNING:tensorflow:From example5-question-base.py:72: The name tf.ConfigProto is deprecated. Please use tf.compat.v1.ConfigProto instead.
+
+INFO:tensorflow:Using config: {'_model_dir': './data/cips/save/question-all-model-base', '_tf_random_seed': None, '_save_summary_steps': 100, '_save_checkpoints_steps': 500, '_save_checkpoints_secs': None, '_session_config': , '_keep_checkpoint_max': 5, '_keep_checkpoint_every_n_hours': 10000, '_log_step_count_steps': 100, '_train_distribute': None, '_device_fn': None, '_protocol': None, '_eval_distribute': None, '_experimental_distribute': None, '_experimental_max_worker_delay_secs': None, '_session_creation_timeout_secs': 7200, '_service': None, '_cluster_spec': <tensorflow.python.training.server_lib.ClusterSpec object at 0x7f9c703cc438>, '_task_type': 'worker', '_task_id': 0, '_global_id_in_cluster': 0, '_master': '', '_evaluation_master': '', '_is_chief': True, '_num_ps_replicas': 0, '_num_worker_replicas': 1}
+INFO:tensorflow:Not using Distribute Coordinator.
+INFO:tensorflow:Running training and evaluation locally (non-distributed).
+INFO:tensorflow:Start train and evaluate loop. The evaluate will happen after every checkpoint. Checkpoint frequency is determined based on RunConfig arguments: save_checkpoints_steps 500 or save_checkpoints_secs None.
+WARNING:tensorflow:From /u/z2367wan/.local/lib/python3.6/site-packages/tensorflow_core/python/training/training_util.py:236: Variable.initialized_value (from tensorflow.python.ops.variables) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use Variable.read_value. Variables in 2.X are initialized automatically both in eager and graph (inside tf.defun) contexts.
+WARNING:tensorflow:
+The TensorFlow contrib module will not be included in TensorFlow 2.0.
+For more information, please see:
+  * https://github.com/tensorflow/community/blob/master/rfcs/20180907-contrib-sunset.md
+  * https://github.com/tensorflow/addons
+  * https://github.com/tensorflow/io (for I/O related ops)
+If you depend on functionality not listed there, please file an issue.
+
+WARNING:tensorflow:From example5-question-base.py:87: shuffle_and_repeat (from tensorflow.contrib.data.python.ops.shuffle_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.data.experimental.shuffle_and_repeat(...)`.
+WARNING:tensorflow:From /u/z2367wan/.local/lib/python3.6/site-packages/tensorflow_core/contrib/data/python/ops/shuffle_ops.py:54: shuffle_and_repeat (from tensorflow.python.data.experimental.ops.shuffle_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.data.Dataset.shuffle(buffer_size, seed)` followed by `tf.data.Dataset.repeat(count)`. Static tf.data optimizations will take care of using the fused implementation.
+WARNING:tensorflow:Entity <function <lambda>.<locals>.<lambda> at 0x7f9c7d5650d0> could not be transformed and will be executed as-is. Please report this to the AutoGraph team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output. Cause: expected exactly one node node, found []
+WARNING:tensorflow:From example5-question-base.py:89: py_func (from tensorflow.python.ops.script_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+tf.py_func is deprecated in TF V2. Instead, there are two
+    options available in V2.
+    - tf.py_function takes a python function which manipulates tf eager
+    tensors instead of numpy arrays. It's easy to convert a tf eager tensor to
+    an ndarray (just call tensor.numpy()) but having access to eager tensors
+    means `tf.py_function`s can use accelerators such as GPUs as well as
+    being differentiable using a gradient tape.
+    - tf.numpy_function maintains the semantics of the deprecated tf.py_func
+    (it is not differentiable, and manipulates numpy arrays). It drops the
+    stateful argument making all functions stateful.
+    
+WARNING:tensorflow:Entity <function <lambda>.<locals>.<lambda> at 0x7f9c7d5768c8> could not be transformed and will be executed as-is. Please report this to the AutoGraph team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output. Cause: expected exactly one node node, found []
+INFO:tensorflow:Calling model_fn.
+WARNING:tensorflow:From /u/z2367wan/.local/lib/python3.6/site-packages/tensorflow_core/python/ops/resource_variable_ops.py:1630: calling BaseResourceVariable.__init__ (from tensorflow.python.ops.resource_variable_ops) with constraint is deprecated and will be removed in a future version.
+Instructions for updating:
+If using Keras pass *_constraint arguments to layers.
+WARNING:tensorflow:From /u/z2367wan/.local/lib/python3.6/site-packages/tensorflow_estimator/python/estimator/canned/head.py:437: to_float (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.cast` instead.
+WARNING:tensorflow:From /u/z2367wan/.local/lib/python3.6/site-packages/tensorflow_core/python/training/adagrad.py:76: calling Constant.__init__ (from tensorflow.python.ops.init_ops) with dtype is deprecated and will be removed in a future version.
+Instructions for updating:
+Call initializer instance with the dtype argument instead of passing it to the constructor
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Create CheckpointSaverHook.
+WARNING:tensorflow:From /u/z2367wan/.local/lib/python3.6/site-packages/tensorflow_core/python/ops/array_ops.py:1475: where (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+INFO:tensorflow:Graph was finalized.
+2020-04-12 12:47:16.796557: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2020-04-12 12:47:16.809901: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2199980000 Hz
+2020-04-12 12:47:16.813993: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x53d6b80 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2020-04-12 12:47:16.814030: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+2020-04-12 12:47:16.816582: W tensorflow/stream_executor/platform/default/dso_loader.cc:55] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory
+2020-04-12 12:47:16.816609: E tensorflow/stream_executor/cuda/cuda_driver.cc:318] failed call to cuInit: UNKNOWN ERROR (303)
+2020-04-12 12:47:16.816634: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (tuna): /proc/driver/nvidia/version does not exist
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Saving checkpoints for 0 into ./data/cips/save/question-all-model-base/model.ckpt.
+INFO:tensorflow:loss = 547.56354, step = 1
+INFO:tensorflow:global_step/sec: 1.0957
+INFO:tensorflow:loss = 116.316055, step = 101 (91.267 sec)
+INFO:tensorflow:global_step/sec: 1.11355
+INFO:tensorflow:loss = 101.024284, step = 201 (89.803 sec)
+INFO:tensorflow:global_step/sec: 1.10801
+INFO:tensorflow:loss = 55.506195, step = 301 (90.252 sec)
+INFO:tensorflow:global_step/sec: 1.1289
+INFO:tensorflow:loss = 46.497105, step = 401 (88.582 sec)
+INFO:tensorflow:Saving checkpoints for 500 into ./data/cips/save/question-all-model-base/model.ckpt.
+WARNING:tensorflow:Entity <function <lambda>.<locals>.<lambda> at 0x7f9b6fc96ea0> could not be transformed and will be executed as-is. Please report this to the AutoGraph team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output. Cause: expected exactly one node node, found []
+WARNING:tensorflow:Entity <function <lambda>.<locals>.<lambda> at 0x7f9b6fc96c80> could not be transformed and will be executed as-is. Please report this to the AutoGraph team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output. Cause: expected exactly one node node, found []
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2020-04-12T12:54:51Z
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from ./data/cips/save/question-all-model-base/model.ckpt-500
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Evaluation [10/100]
+INFO:tensorflow:Evaluation [20/100]
+INFO:tensorflow:Evaluation [30/100]
+INFO:tensorflow:Evaluation [40/100]
+INFO:tensorflow:Evaluation [50/100]
+INFO:tensorflow:Evaluation [60/100]
+INFO:tensorflow:Evaluation [70/100]
+INFO:tensorflow:Evaluation [80/100]
+INFO:tensorflow:Evaluation [90/100]
+INFO:tensorflow:Evaluation [100/100]
+INFO:tensorflow:Finished evaluation at 2020-04-12-12:56:45
+INFO:tensorflow:Saving dict for global step 500: accuracy = 0.8417969, average_loss = 0.55210876, global_step = 500, loss = 70.66992
+INFO:tensorflow:Saving 'checkpoint_path' summary for global step 500: ./data/cips/save/question-all-model-base/model.ckpt-500
+INFO:tensorflow:global_step/sec: 0.486869
+INFO:tensorflow:loss = 47.836555, step = 501 (205.393 sec)
+INFO:tensorflow:global_step/sec: 1.40793
+INFO:tensorflow:loss = 22.784729, step = 601 (71.027 sec)
+INFO:tensorflow:global_step/sec: 1.09917
+INFO:tensorflow:loss = 23.295576, step = 701 (90.978 sec)
+INFO:tensorflow:global_step/sec: 1.15428
+INFO:tensorflow:loss = 20.322834, step = 801 (86.634 sec)
+INFO:tensorflow:global_step/sec: 1.09482
+INFO:tensorflow:loss = 20.509928, step = 901 (91.339 sec)
+INFO:tensorflow:Saving checkpoints for 1000 into ./data/cips/save/question-all-model-base/model.ckpt.
+WARNING:tensorflow:Entity <function <lambda>.<locals>.<lambda> at 0x7f9b503c76a8> could not be transformed and will be executed as-is. Please report this to the AutoGraph team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output. Cause: expected exactly one node node, found []
+WARNING:tensorflow:Entity <function <lambda>.<locals>.<lambda> at 0x7f9b503c7a60> could not be transformed and will be executed as-is. Please report this to the AutoGraph team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output. Cause: expected exactly one node node, found []
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2020-04-12T13:03:55Z
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from ./data/cips/save/question-all-model-base/model.ckpt-1000
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Evaluation [10/100]
+INFO:tensorflow:Evaluation [20/100]
+INFO:tensorflow:Evaluation [30/100]
+INFO:tensorflow:Evaluation [40/100]
+INFO:tensorflow:Evaluation [50/100]
+INFO:tensorflow:Evaluation [60/100]
+INFO:tensorflow:Evaluation [70/100]
+INFO:tensorflow:Evaluation [80/100]
+INFO:tensorflow:Evaluation [90/100]
+INFO:tensorflow:Evaluation [100/100]
+INFO:tensorflow:Finished evaluation at 2020-04-12-13:05:47
+INFO:tensorflow:Saving dict for global step 1000: accuracy = 0.84632814, average_loss = 0.5865783, global_step = 1000, loss = 75.08202
+INFO:tensorflow:Saving 'checkpoint_path' summary for global step 1000: ./data/cips/save/question-all-model-base/model.ckpt-1000
+INFO:tensorflow:global_step/sec: 0.49576
+INFO:tensorflow:loss = 22.429424, step = 1001 (201.710 sec)
+INFO:tensorflow:global_step/sec: 1.40023
+INFO:tensorflow:loss = 14.074446, step = 1101 (71.417 sec)
+INFO:tensorflow:global_step/sec: 1.12318
+INFO:tensorflow:loss = 13.054605, step = 1201 (89.034 sec)
+INFO:tensorflow:global_step/sec: 1.09644
+INFO:tensorflow:loss = 10.610199, step = 1301 (91.210 sec)
+INFO:tensorflow:global_step/sec: 1.13429
+INFO:tensorflow:loss = 8.854061, step = 1401 (88.156 sec)
+INFO:tensorflow:Saving checkpoints for 1500 into ./data/cips/save/question-all-model-base/model.ckpt.
+WARNING:tensorflow:Entity <function <lambda>.<locals>.<lambda> at 0x7f9b6f302ea0> could not be transformed and will be executed as-is. Please report this to the AutoGraph team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output. Cause: expected exactly one node node, found []
+WARNING:tensorflow:Entity <function <lambda>.<locals>.<lambda> at 0x7f9b50261268> could not be transformed and will be executed as-is. Please report this to the AutoGraph team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output. Cause: expected exactly one node node, found []
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2020-04-12T13:13:04Z
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from ./data/cips/save/question-all-model-base/model.ckpt-1500
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Evaluation [10/100]
+INFO:tensorflow:Evaluation [20/100]
+INFO:tensorflow:Evaluation [30/100]
+INFO:tensorflow:Evaluation [40/100]
+INFO:tensorflow:Evaluation [50/100]
+INFO:tensorflow:Evaluation [60/100]
+INFO:tensorflow:Evaluation [70/100]
+INFO:tensorflow:Evaluation [80/100]
+INFO:tensorflow:Evaluation [90/100]
+INFO:tensorflow:Evaluation [100/100]
+INFO:tensorflow:Finished evaluation at 2020-04-12-13:14:55
+INFO:tensorflow:Saving dict for global step 1500: accuracy = 0.8617188, average_loss = 0.60827094, global_step = 1500, loss = 77.85868
+INFO:tensorflow:Saving 'checkpoint_path' summary for global step 1500: ./data/cips/save/question-all-model-base/model.ckpt-1500
+INFO:tensorflow:global_step/sec: 0.480205
+INFO:tensorflow:loss = 7.7801003, step = 1501 (208.243 sec)
+INFO:tensorflow:global_step/sec: 1.43329
+INFO:tensorflow:loss = 8.396904, step = 1601 (69.770 sec)
+INFO:tensorflow:global_step/sec: 1.11945
+INFO:tensorflow:loss = 6.4036674, step = 1701 (89.333 sec)
+INFO:tensorflow:global_step/sec: 1.14101
+INFO:tensorflow:loss = 6.8388557, step = 1801 (87.641 sec)
+INFO:tensorflow:global_step/sec: 1.11204
+INFO:tensorflow:loss = 8.548832, step = 1901 (89.924 sec)
+INFO:tensorflow:Saving checkpoints for 2000 into ./data/cips/save/question-all-model-base/model.ckpt.
+WARNING:tensorflow:Entity <function <lambda>.<locals>.<lambda> at 0x7f9b500ee598> could not be transformed and will be executed as-is. Please report this to the AutoGraph team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output. Cause: expected exactly one node node, found []
+WARNING:tensorflow:Entity <function <lambda>.<locals>.<lambda> at 0x7f9b500ee8c8> could not be transformed and will be executed as-is. Please report this to the AutoGraph team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output. Cause: expected exactly one node node, found []
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2020-04-12T13:22:01Z
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from ./data/cips/save/question-all-model-base/model.ckpt-2000
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Evaluation [10/100]
+INFO:tensorflow:Evaluation [20/100]
+INFO:tensorflow:Evaluation [30/100]
+INFO:tensorflow:Evaluation [40/100]
+INFO:tensorflow:Evaluation [50/100]
+INFO:tensorflow:Evaluation [60/100]
+INFO:tensorflow:Evaluation [70/100]
+INFO:tensorflow:Evaluation [80/100]
+INFO:tensorflow:Evaluation [90/100]
+INFO:tensorflow:Evaluation [100/100]
+INFO:tensorflow:Finished evaluation at 2020-04-12-13:23:52
+INFO:tensorflow:Saving dict for global step 2000: accuracy = 0.85414064, average_loss = 0.6451704, global_step = 2000, loss = 82.58181
+INFO:tensorflow:Saving 'checkpoint_path' summary for global step 2000: ./data/cips/save/question-all-model-base/model.ckpt-2000
+INFO:tensorflow:global_step/sec: 0.498606
+INFO:tensorflow:loss = 5.389035, step = 2001 (200.557 sec)
+INFO:tensorflow:global_step/sec: 1.37083
+INFO:tensorflow:loss = 5.277668, step = 2101 (72.951 sec)
+INFO:tensorflow:global_step/sec: 1.12386
+INFO:tensorflow:loss = 2.812738, step = 2201 (88.981 sec)
+INFO:tensorflow:global_step/sec: 1.16136
+INFO:tensorflow:loss = 6.258188, step = 2301 (86.103 sec)
+INFO:tensorflow:global_step/sec: 1.12442
+INFO:tensorflow:loss = 4.611644, step = 2401 (88.935 sec)
+INFO:tensorflow:Saving checkpoints for 2500 into ./data/cips/save/question-all-model-base/model.ckpt.
+WARNING:tensorflow:From /u/z2367wan/.local/lib/python3.6/site-packages/tensorflow_core/python/training/saver.py:963: remove_checkpoint (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to delete files with this prefix.
+WARNING:tensorflow:Entity <function <lambda>.<locals>.<lambda> at 0x7f9b6f302e18> could not be transformed and will be executed as-is. Please report this to the AutoGraph team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output. Cause: expected exactly one node node, found []
+WARNING:tensorflow:Entity <function <lambda>.<locals>.<lambda> at 0x7f9b486d4158> could not be transformed and will be executed as-is. Please report this to the AutoGraph team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output. Cause: expected exactly one node node, found []
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2020-04-12T13:31:00Z
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from ./data/cips/save/question-all-model-base/model.ckpt-2500
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Evaluation [10/100]
+INFO:tensorflow:Evaluation [20/100]
+INFO:tensorflow:Evaluation [30/100]
+INFO:tensorflow:Evaluation [40/100]
+INFO:tensorflow:Evaluation [50/100]
+INFO:tensorflow:Evaluation [60/100]
+INFO:tensorflow:Evaluation [70/100]
+INFO:tensorflow:Evaluation [80/100]
+INFO:tensorflow:Evaluation [90/100]
+INFO:tensorflow:Evaluation [100/100]
+INFO:tensorflow:Finished evaluation at 2020-04-12-13:32:52
+INFO:tensorflow:Saving dict for global step 2500: accuracy = 0.8564063, average_loss = 0.6860324, global_step = 2500, loss = 87.81215
+INFO:tensorflow:Saving 'checkpoint_path' summary for global step 2500: ./data/cips/save/question-all-model-base/model.ckpt-2500
+INFO:tensorflow:global_step/sec: 0.494251
+INFO:tensorflow:loss = 5.726695, step = 2501 (202.325 sec)
+INFO:tensorflow:global_step/sec: 1.3859
+INFO:tensorflow:loss = 6.126678, step = 2601 (72.157 sec)
+INFO:tensorflow:global_step/sec: 1.13779
+INFO:tensorflow:loss = 3.5455914, step = 2701 (87.890 sec)
+INFO:tensorflow:global_step/sec: 1.12641
+INFO:tensorflow:loss = 3.0929623, step = 2801 (88.777 sec)
+INFO:tensorflow:global_step/sec: 1.12795
+INFO:tensorflow:loss = 3.1247578, step = 2901 (88.657 sec)
+INFO:tensorflow:Saving checkpoints for 3000 into ./data/cips/save/question-all-model-base/model.ckpt.
+WARNING:tensorflow:Entity <function <lambda>.<locals>.<lambda> at 0x7f9b6fc96488> could not be transformed and will be executed as-is. Please report this to the AutoGraph team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output. Cause: expected exactly one node node, found []
+WARNING:tensorflow:Entity <function <lambda>.<locals>.<lambda> at 0x7f9b6fc96c80> could not be transformed and will be executed as-is. Please report this to the AutoGraph team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output. Cause: expected exactly one node node, found []
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2020-04-12T13:39:59Z
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from ./data/cips/save/question-all-model-base/model.ckpt-3000
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Evaluation [10/100]
+INFO:tensorflow:Evaluation [20/100]
+INFO:tensorflow:Evaluation [30/100]
+INFO:tensorflow:Evaluation [40/100]
+INFO:tensorflow:Evaluation [50/100]
+INFO:tensorflow:Evaluation [60/100]
+INFO:tensorflow:Evaluation [70/100]
+INFO:tensorflow:Evaluation [80/100]
+INFO:tensorflow:Evaluation [90/100]
+INFO:tensorflow:Evaluation [100/100]
+INFO:tensorflow:Finished evaluation at 2020-04-12-13:41:51
+INFO:tensorflow:Saving dict for global step 3000: accuracy = 0.8564063, average_loss = 0.69340616, global_step = 3000, loss = 88.75599
+INFO:tensorflow:Saving 'checkpoint_path' summary for global step 3000: ./data/cips/save/question-all-model-base/model.ckpt-3000
+INFO:tensorflow:Loss for final step: 4.046349.
